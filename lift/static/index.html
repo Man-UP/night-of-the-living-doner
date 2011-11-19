@@ -1,0 +1,22 @@
+<html>
+    <head>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+        <script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+
+    </head>
+    <body>
+        <form name="button" action="." method="post">
+            <input id="button" type="button" />
+        </form>
+        <script type="text/javascript">
+            $(document).click( function() {
+                $.post('/lift', function(data) {
+                    $('#button').html(data);
+                });
+            });
+           
+        </script>
+    </body>
+</html>
